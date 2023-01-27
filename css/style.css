@@ -68,6 +68,29 @@ form{
     height: 70vh;
 }
 
+@media (max-width: 576px){
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-susc{
+        margin-top: 10px;
+    }
+
+    .boton-susc{
+        margin-top: 10px;
+    }
+
+    .social-media{
+        margin-top: 10px;
+    }
+
+}
+
+
 .margin-enterate{
     font-size: 0.9rem;
     margin-bottom: -0.3rem;
@@ -109,16 +132,19 @@ form{
 
 .input-susc{
     border-radius: 2rem;
+    max-width: 50%;
 }
 
 .boton-susc{
     border-radius: 2rem;
     background-color: #252525;
-    border:solid white;
+    border: solid white;
     color: white;
     margin-left: 0.5rem;
     padding: 0.3rem;
     transition: all 0.3s;
+    max-width: 50%;
+    text-decoration: none;
 }
 
 .boton-susc:hover{
