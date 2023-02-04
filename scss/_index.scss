@@ -1,0 +1,26 @@
+@mixin flex-column-gap{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 1.7em;
+}
+
+.social-media{
+    @include flex-column-gap;
+}
+
+.btn-form{
+    text-decoration: none;
+    color: $black;
+    font-weight: bolder;
+    background-color: $dark_green;
+    border-radius: 2rem;
+    font-size: 18px;
+    white-space: nowrap;
+    padding: 0.5rem;
+    transition: all 0.3s;
+}
+
+.btn-form-cont{
+    @extend .btn-form;
+}

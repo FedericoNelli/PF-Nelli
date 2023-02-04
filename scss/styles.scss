@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "variables";
+@import "index";
 
 * {
     margin: 0;
@@ -12,16 +14,16 @@ html, body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #252525;
+    background-color: $black;
 }
 
 body .menu{
-    background-color:#FEFEF7;
+    background-color: $white;
 }
 
 header{
-    border-top: 1rem solid #FEFEF7;
-    background-color: #FEFEF7;
+    border-top: 1rem solid $white;
+    background-color: $white;
 }
 
 nav{
@@ -31,15 +33,15 @@ nav{
     gap: 5rem;
     align-items: center;
     text-transform: uppercase;
-    background-color: #FEFEF7;
+    background-color: $white;
 }
 
 footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #252525;
-    color: #252525;
+    background-color: $black;
+    color: $black;
     font-size: 0.8rem;
     text-transform: none;
     margin-top: auto;
@@ -47,7 +49,7 @@ footer{
 }
 
 footer span{
-    color: white;
+    color: $white;
 }
 
 form{
@@ -55,7 +57,7 @@ form{
 }
 
 .back-white{
-    background-color: #FEFEF7;
+    background-color: $white;
 }
 
 /* INDEX */
@@ -65,7 +67,7 @@ form{
     height: 70vh;
 }
 
-@media (max-width: 768px){
+@media (max-width: $screen-md){
     .boton-susc{
         margin-top: 10px;
     }
@@ -76,7 +78,7 @@ form{
     }
 }
 
-@media (max-width: 576px){
+@media (max-width: $screen-sm){
     footer{
         font-size: 0.7rem;
     }
@@ -104,11 +106,11 @@ form{
 }
 
 .banderas{
-    border-left: solid 1px #FEFEF7;
-    border-right: solid 1px #FEFEF7;
+    border-left: solid 1px $white;
+    border-right: solid 1px $white;
 }
 
-@media (max-width: 992px){
+@media (max-width: $screen-gr){
     .input-susc{
         margin-top: 10px;
         width: 100px;
@@ -126,13 +128,6 @@ form{
     margin-left: 0.1rem;
 }
 
-.social-media{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    gap: 1.7em;
-}
-
 .input-susc{
     border-radius: 2rem;
     max-width: 50%;
@@ -140,18 +135,18 @@ form{
 
 .boton-susc{
     border-radius: 2rem;
-    background-color: #252525;
-    border: solid white;
-    color: white;
+    background-color: $black;
+    border: solid $white;
+    color: $white;
     margin-left: 0.5rem;
     padding: 0.3rem;
     transition: all 0.3s;
     max-width: 50%;
     text-decoration: none;
-}
 
-.boton-susc:hover{
-    transform: scale(1.1);
+    &:hover{
+        transform: scale(1.1);
+    } 
 }
 
 /* NOSOTROS */
@@ -166,22 +161,20 @@ form{
     text-align: center;
     box-shadow: 4px 4px 10px rgb(0 0 0 / 46%);
     border-radius: 2rem;
-    background-color: #E9EABC;
-}
+    background-color: $light_green;
+    a{
+        text-decoration: none;
+        color: $black;
+        font-weight: bolder;
+        background-color: $dark_green;
+        border-radius: 2rem;
+        font-size: 18px;
+        white-space: nowrap;
+    }
 
-
-.card a{
-    text-decoration: none;
-    color: #252525;
-    font-weight: bolder;
-    background-color: #C9CB57;
-    border-radius: 2rem;
-    font-size: 18px;
-    white-space: nowrap;
-}
-
-.card p{
-    text-transform: none;
+    p{
+        text-transform: none;
+    }
 }
 
 .card-img-top{
@@ -213,10 +206,10 @@ form{
 .dicc-img{
     box-shadow: 4px 4px 3px 0.1px rgba(0, 0, 0, 0.2);
     transition: all 0.7s;
-}
 
-.dicc-img:hover{
-    transform: scale(1.05);
+    &:hover{
+        transform: scale(1.05);
+    }
 }
 
 /* CONTACTO */
@@ -226,7 +219,7 @@ form{
 }
 
 .box-form{
-    background-color: #E9EABC;
+    background-color: $light_green;
     border-radius: 3rem;
     box-shadow: 4px 4px 3px 0.1px rgba(0, 0, 0, 0.2);
     padding-block: 2rem;
@@ -234,40 +227,31 @@ form{
     padding-right: 3rem;
 }
 
-.btn-form{
-    text-decoration: none;
-    color: #252525;
-    font-weight: bolder;
-    background-color: #C9CB57;
-    border-radius: 2rem;
-    font-size: 18px;
-    white-space: nowrap;
-    padding: 0.5rem;
-    transition: all 0.3s;
-}
-
 .btn-form:hover{
-    background-color: #d8da72;
+    background-color: $green_hover;
 }
 
 .form-control{
     resize: none;
 }
 
-
-.form-content h1{
+.form-content {
+    h1{ 
     text-align: center;
+    }
 }
 
-.form-msg p{
-    background-color: #E9EABC;
-    padding: 2rem;
-    border-radius: 2rem;
-    text-transform: none;
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: lighter;
-    box-shadow: 4px 4px 3px 0.1px rgba(0, 0, 0, 0.2);
+.form-msg {
+    p{
+        background-color: $light_green;
+        padding: 2rem;
+        border-radius: 2rem;
+        text-transform: none;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: lighter;
+        box-shadow: 4px 4px 3px 0.1px rgba(0, 0, 0, 0.2);
+    }
 }
 
 /* IMAGENES */
@@ -277,8 +261,8 @@ form{
     height: auto;
     box-shadow: 4px 4px 3px 0.1px rgba(0, 0, 0, 0.2);
     transition: all 0.7s;
-}
 
-.img-fl:hover{
-    transform: scale(1.05);
+    &:hover{
+        transform: scale(1.05);
+    }
 }
