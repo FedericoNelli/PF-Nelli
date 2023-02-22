@@ -269,4 +269,14 @@ form {
   transform: scale(1.05);
 }
 
+/*LOGIN*/
+
+.login-full {
+  background: #C9CB57;
+  background: -webkit-linear-gradient(to right, #C9CB57, #E9EABC);
+  background: linear-gradient(to right, #C9CB57, #E9EABC);
+
+  text-transform: none;
+  }
+
 /*# sourceMappingURL=styles.css.map */
